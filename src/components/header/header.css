@@ -1,0 +1,35 @@
+.header {
+  padding: 2rem 0;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .navbar .logo i {
+  font-size: 2rem;
+}
+
+.header .navbar .navbar-nav {
+  display: flex;
+}
+
+.navbar-brand {
+  font-size: 3rem;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.navbar-nav .nav-item .nav-link{
+  color: #3d7ec0;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: #74b0e9;
+  background: #2f2f2f;
+  border-radius: 1rem;
+}

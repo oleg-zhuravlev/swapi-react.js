@@ -1,0 +1,20 @@
+.item-list {
+  border-radius: 1rem;
+  background: #2f2f2f;
+  width: 45%;
+  margin-bottom: 2rem;
+}
+
+.item-list .item {
+  border-top: 1px solid #6e6e6e;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+}
+.item-list .item:first-child {
+  border-top: none;
+}
+.item-list .item:hover {
+  cursor: pointer;
+  color: #74b0e9;
+  background: #4f4f4f;
+}
