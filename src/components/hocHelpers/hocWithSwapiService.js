@@ -1,7 +1,7 @@
 import React from 'react';
 import {SwapiServiceConsumer} from '../serviceСontext/swapiServiceСontext';
 
-export default (Wrapped, mapMethodsToProps) => {
+const hocWithSwapiService = (Wrapped, mapMethodsToProps) => {
   return (props) => {
     return (
       <SwapiServiceConsumer>
@@ -19,3 +19,5 @@ export default (Wrapped, mapMethodsToProps) => {
     )
   }
 }
+
+export default hocWithSwapiService;

@@ -1,27 +1,44 @@
 import React from 'react';
-
+import {NavLink, Link} from 'react-router-dom';
 import './header.css';
 
-export default () => {
+const Header = () => {
+  const links = [
+    {label: 'People', to: '/people'},
+    {label: 'Planets', to: '/planets'},
+    {label: 'Starships', to: '/starships'},
+  ];
+
   return (
     <div className="header">
       <nav className="navbar">
         <div className="logo d-center">
-          <span className="navbar-brand">StarDB</span>
-          <i className="fas fa-star"></i>
+          <Link to="/">
+            <span className="navbar-brand">StarDB</span>
+            <i className="fas fa-star"></i>
+          </Link>
         </div>
         <ul className="navbar-nav">
-          <li className="nav-item d-center">
-            <a className="nav-link" href="#">People</a>
-          </li>
-          <li className="nav-item d-center">
-            <a className="nav-link" href="#">Planets</a>
-          </li>
-          <li className="nav-item d-center">
-            <a className="nav-link" href="#">Starship</a>
-          </li>
+
+          {links.map(({label, to}) => (
+            <li
+              key={label} 
+              className="nav-item d-center"
+            >
+              <NavLink 
+                activeClassName="active" 
+                className="nav-link" 
+                to={to}
+              >
+                {label}
+              </NavLink>
+            </li>
+          ))}
+
         </ul>
       </nav>
     </div>
   );
 }
+
+export default Header;

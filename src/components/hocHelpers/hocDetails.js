@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default (Wrapped) => {
+const hocDetails = (Wrapped) => {
   return class extends Component {
     state = {
       data: null,
@@ -54,3 +54,5 @@ export default (Wrapped) => {
     }
   }
 }
+
+export default hocDetails;

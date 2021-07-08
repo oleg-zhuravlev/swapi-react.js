@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Switch, Route} from 'react-router-dom';
 import Header from '../header/Header';
 import {RandomPlanet} from '../swСomponents/random';
 import PeoplePage from '../pages/PeoplePage';
@@ -24,10 +25,21 @@ export default class App extends Component {
               <main>
                 <RandomPlanet/>
 
-                <PeoplePage/>
-                <PlanetsPage/>
-                <StarshipsPage/>
-
+                <Switch>
+                  <Route 
+                    path="/" 
+                    exact 
+                    render={() => <h2>Welcome to Star Wars DB</h2>}/>
+                  <Route path="/people">
+                    <PeoplePage/>
+                  </Route>
+                  <Route path="/planets">
+                    <PlanetsPage/>
+                  </Route>
+                  <Route path="/starships">
+                    <StarshipsPage/>
+                  </Route>
+                </Switch>
               </main>
             </SwapiServiceProvider>
           </ErrorBoundary>

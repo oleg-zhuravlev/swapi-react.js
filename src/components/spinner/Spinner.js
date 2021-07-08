@@ -2,7 +2,7 @@ import React from 'react';
 
 import './spinner.css';
 
-export default () => {
+const Spinner = () => {
   return (
     <div className="loadingio-spinner-double-ring-pmu9sn2cb38">
       <div className="ldio-zp3hytrjuh">
@@ -18,3 +18,5 @@ export default () => {
     </div>
   );
 }
+
+export default Spinner;

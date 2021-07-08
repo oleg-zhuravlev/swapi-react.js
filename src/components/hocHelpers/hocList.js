@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default (Wrapped, renderItem) => {
+const hocList = (Wrapped, renderItem) => {
   return class extends Component {
     state = {
       data: null,
@@ -39,3 +39,5 @@ export default (Wrapped, renderItem) => {
     }
   }
 }
+
+export default hocList;

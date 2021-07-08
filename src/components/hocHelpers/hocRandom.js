@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default (Wrapped) => {
+const hocRandom = (Wrapped) => {
   return class extends Component {
     state = {
       data: {},
@@ -50,3 +50,5 @@ export default (Wrapped) => {
     }
   }
 }
+
+export default hocRandom;
