@@ -10,7 +10,7 @@ export default class SwapiService {
         throw new Error(`Could not fetch ${ url }, received ${ res.status }`);
       }
 
-      return await res.json();
+      return res.json();
     } catch (err) {
       console.error(err);
     }
